@@ -1,0 +1,72 @@
+.notebooks__main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.notebooks__header{
+    display: flex;
+    column-gap: 4%;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 4% 3% 3% 5%;
+}
+
+.notebooks__header-text{
+    font-size: 20px;
+}
+
+.notebooks__list-container{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: min-content;
+    overflow: scroll;
+    scrollbar-width: thin;
+    overflow-x: hidden;
+    height: 75vh;
+}
+
+.add-new-notebook{
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    border-radius: 9px;
+    background-color: #8f7998;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    opacity: 70%;
+    height: 10%;
+    width: 90%;
+}
+
+.add-new-notebook:hover{
+    background-color: #5b4d60;
+}
+
+.plus{
+    font-size: 30px;
+}
+.new-notebook-text{
+    font-size: 14px;
+    text-align: center;
+}
+
+.choose-cover{
+    margin: 10% auto 5% auto;
+    display: flex;
+    align-items: center;
+    column-gap: 5%;
+}
+
+.cover-option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
+
+.cover-label{
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 3%;
+}

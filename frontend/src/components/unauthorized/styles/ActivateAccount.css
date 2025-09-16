@@ -1,0 +1,70 @@
+@keyframes activate_card{
+    0%{
+        /* background-image: url("../../../img/activate_card.svg");
+        background-repeat: no-repeat;
+        background-size: contain; */
+        rotate: 0deg;
+    }
+    50%{
+        /* background-image: url("../../../img/activate_card_hover.svg");
+        background-repeat: no-repeat;
+        background-size: contain; */
+        rotate: 5deg;
+    }
+    100%{
+        /* background-image: url("../../../img/activate_card.svg");
+        background-repeat: no-repeat;
+        background-size: contain; */
+        rotate: 0deg;
+    }
+}
+
+.activate__card{
+    display: flex;
+    background-image: url("../../../img/activate_card.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90%;
+    height: 60%;
+    margin: auto 0 auto auto;
+    align-items: center;
+}
+.card_text{
+    rotate: 5.56deg;
+    font-size: 25px;
+    width: 90%;
+    text-align: center;
+}
+.activate__card:hover{
+    animation: activate_card;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.activate__container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin-left: 0;
+    align-items: center;
+}
+.activate__container p{
+    margin-top: auto;
+    text-align: center;
+    font-size: 3vh;
+    width: 60%;
+}
+.activate__container input{
+    background-image: url("../../../img/inputs__code.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: start;
+    width: 78%;
+    height: 15%;
+    align-self: end;
+    padding: 5px 10px 5px 15px;
+    margin-top: auto;
+    font-size: 35px;
+    letter-spacing: 42px;
+    caret-color: transparent;
+}

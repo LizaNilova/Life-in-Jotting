@@ -1,0 +1,174 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0px;
+    row-gap: 5vh;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+.logo-container img{
+    width: 110px;
+}
+.logo-container label{
+    font-family: 'Mogra',  system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+.notebook__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 3vw;
+    background-image: url("../../../img/sign_up_bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 60vw;
+    height: 60vh;
+    min-height: 440px;
+}
+.notebook__google-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 1vw 0 2vw 2vw;
+}
+.notebook__google-container img{
+    width: 55px;
+    rotate: 35deg;
+    opacity: 65%;
+    align-self: end;
+}
+.notebook__google-container label{
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+}
+.google-btn{
+    display: flex;
+    background-image: url("../../../img/google_btn.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 170px;
+    height: 50px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    margin-top: 15%;
+}
+.google-btn img{
+    width: 30px;
+    rotate: 0deg;
+    opacity: 100%;
+    align-self: center;
+}
+.google-btn label{
+    font-size: 14px;
+    margin: 0;
+}
+.google__bottom{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+.google__bottom img{
+    width: auto;
+    height: 70px;
+    rotate: 0deg;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.google__bottom label{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: center;
+    justify-self: center;
+    font-size: 14px;
+}
+.notebook__classic-sign-up{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 2vw 2vw 2vw 0;
+}
+.notebook__classic-sign-up label{
+    font-size: 28px;
+    width: 80%;
+    margin-left: 3%;
+    color: transparent;
+}
+.notebook__classic-sign-up img{
+    position:fixed;
+    align-self: end;
+    width: 55px;
+    rotate: 20deg;
+    opacity: 65%;
+}
+.sign-up__container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.sign-up__inputs{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.sign-up__inputs label{
+    font-size: 14px;
+    color: black;
+}
+.sign-up__inputs input{
+    background-image: url("../../../img/input.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 10px 20px 10px 20px;
+    font-size: 12px;
+}
+.sign-up__bottom{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 0;
+    margin-top: auto;
+    width: 100%;
+}
+.next-btn{
+    background-image: url("../../../img/next_btn.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 15px;
+    width: 23%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+}
+.next-btn label{
+    font-size: 14px;
+    color: black;
+}
+.next-btn img{
+    position: relative;
+    width: 22px;
+    rotate: 0deg;
+}

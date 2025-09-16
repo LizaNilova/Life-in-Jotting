@@ -1,0 +1,28 @@
+.notebooks__list-item{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2%;
+    align-items: center;
+    justify-content: center;
+    /* margin: 10%; */
+    padding: 4%;
+    height: 120px
+}
+
+.notebooks__list-item img{
+    height: 70px;
+}
+
+.notebooks__list-item:hover {
+    background-color: #978c9a;
+    padding: 4%;
+    border-radius: 5%;
+}
+
+.notebooks__list-item:hover img{
+    opacity: 100%;
+}
+
+.notebook__name{
+    font-size: 14px;
+}

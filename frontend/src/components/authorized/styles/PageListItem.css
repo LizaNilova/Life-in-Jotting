@@ -1,0 +1,32 @@
+.page-list-item__main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 4% 0 0 ;
+}
+
+.pages-list-item__container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2%;
+    justify-content: left;
+    align-items: center;
+    padding: 1%;
+    margin: 1% 6%;
+}
+
+.page-list-item__main:hover {
+    background-color: #bebebe;
+}
+
+.new-page-icon{
+    width: 9%;
+}
+
+.page__settings-icon{
+    width: 20%;
+    display: flex;
+    margin: auto;
+    padding: 2%;
+}
+

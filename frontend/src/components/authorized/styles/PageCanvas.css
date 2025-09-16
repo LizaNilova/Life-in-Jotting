@@ -1,0 +1,35 @@
+.page-canvas__main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.page-canvas__header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 0 0 5% 0;
+}
+
+.page-canvas__main-field{
+    padding-bottom: 90px;
+    min-height: 80%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+.page-canvas__save{
+    margin:1% 1%;
+    padding: 2% 1%;
+    font-size: 14px;
+    background-color:rgb(121, 200, 78);
+    border-radius: 35px;
+}
+
+.page-canvas__btns{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 50%;
+}
