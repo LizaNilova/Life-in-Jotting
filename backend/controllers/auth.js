@@ -138,7 +138,6 @@ export class AuthController {
                 httpOnly: true,
                 expires: new Date(Date.now() + 1 * 24 * 60 * 1000),
             });
-            console.log("nfdvkjkfvjdfnkvjdf")
             response.json({ message: 'The user is authorized' });
         } else {
             response.json({ message: tokens.message })

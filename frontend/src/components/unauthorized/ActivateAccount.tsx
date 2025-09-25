@@ -38,19 +38,19 @@ export const ActivateAccount = () => {
             <div className="notebook__container">
                 <div className="sticky-note__container">
                     <div className="activate__card">
-                        <div className="card_text">Підтвердження реєстрації</div>
+                        <div className="card_text">Registration Confirmation</div>
 
                     </div>
                 </div>
                 <div className="activate__container">
                     <img className="bulb" src={bulb} alt="bulb" />
-                    <p>Введіть код, який було відправлено на Ваш e-mail</p>
+                    <p>Enter the code that was sent to your e-mail</p>
                     <input maxLength={4} value={code} onChange={(e) => { setCode(e.target.value) }} placeholder="0000" type="text" />
                     <div className="bottom">
                         <img className="star" src={star} alt="star" />
                         <div className="next-btn"
                             onClick={handleSubmit}>
-                            <label>Далі</label>
+                            <label>Next</label>
                             <img src={next} alt="next" />
                         </div>
                     </div>

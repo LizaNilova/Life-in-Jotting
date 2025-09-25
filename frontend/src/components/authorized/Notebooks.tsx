@@ -54,12 +54,12 @@ export const Notebooks = () => {
     return (
         <div className="notebooks__main-container">
             <div className="notebooks__header">
-                <div className="notebooks__header-text">Мої блокноти</div>
+                <div className="notebooks__header-text">My notebooks</div>
                 <img className="notebooks__header-icon" src={notebook_icon} />
             </div>
             <div className="add-new-notebook" onClick={() => setModalActive(true)}>
                 <div className="plus">+</div>
-                <p className="new-notebook-text">Новий блокнот</p>
+                <p className="new-notebook-text">Create a new notebook</p>
             </div>
             <div className="notebooks__list-container">
                 {notebooks.map((item, index) => (
@@ -69,16 +69,18 @@ export const Notebooks = () => {
             </div>
             <CreateForm active={modalActive} setActive={setModalActive} >
                 <form className="create-page-form" onSubmit={submitCreatingPage}>
-                    <p className="create-page__header">Створення сторінки</p>
+                    <p className="create-page__header">Create a new notebook</p>
                     <div className="create-page__inputs">
-                        <label>Назва блокноту</label>
+                        <label>Notebook's title</label>
                         <input type="text" value={title} onChange={(e) => { setTitle(e.target.value) }} />
                     </div>
                     <div className="choose-cover">
-                        <label className="cover-label">Обкладинка</label>
+                        <label className="cover-label">Cover</label>
                         <Select
                             value={selectedOption}
-                            onChange={setSelectedOption}
+                            onChange={(option) => {
+                                if (option) setSelectedOption(option);
+                            }}
                             defaultValue={notebook_covers[0]}
                             options={notebook_covers}
                             formatOptionLabel={cover => (
@@ -90,7 +92,7 @@ export const Notebooks = () => {
                         />
                     </div>
                     <div className="create-page__btn">
-                        <input type="submit" value="Створити" />
+                        <input type="submit" value="Submit" />
                     </div>
                 </form>
             </CreateForm>

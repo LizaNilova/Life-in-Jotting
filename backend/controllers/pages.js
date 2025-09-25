@@ -1,4 +1,3 @@
-// import notebooks from "../models/notebooks.js";
 import { createPage, getPageById, editPage, getAllPagesOfNotebook, getAllUsersNotebooks, createNotebook } from "../services/pageService.js";
 import jwb from "jsonwebtoken"
 import { getUserByIdInToken } from "../services/userService.js";
@@ -107,7 +106,6 @@ export class PagesController {
             const user_data = await getUserByIdInToken(user.id)
             const notebook_id = req.params.notebook_id
             if (user_data) {
-                // console.log(notebook_id)
                 res.json({
                     pages: await getAllPagesOfNotebook({ notebook_id: notebook_id }),
                     notebook_id: notebook_id,

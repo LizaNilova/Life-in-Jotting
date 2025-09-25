@@ -14,14 +14,13 @@ const initialState: authState = {
 
 export const signup = createAsyncThunk('auth/sign-up', async ({ username, password, passwordConfirmation, email }: registerParams) => {
     try {
-        // console.log(authRouter.registerPath())
         const { data } = await axios.post(authRouter.registerPath(), {
             username,
             password,
             passwordConfirmation,
             email
         }, { withCredentials: true })
-
+        console.log(data)
         return data
     } catch (error: any) {
         console.log("Error in sign-up function: ", error.message)

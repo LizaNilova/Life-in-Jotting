@@ -4,25 +4,25 @@ import { AuthController } from "../controllers/auth.js"
 const router = new Router()
 const auth = new AuthController()
 
-//Реєстрація користувача в системі
+//Sign up in the system
 router.post('/sign-up', auth.signUp)
 
-//Авторизація в системі
+//Sign in in the system
 router.post('/sign-in', auth.signIn)
 
 //Refresh token
 router.get('/refresh', auth.refresh)
 
-//Підтвердження пошти (перевірка відповідності введеного коду активації)
+//Email confirmation (verification of the entered activation code)
 router.post('/confirm/:eventId', auth.confirmEmail)
 
 //Sign Out
 router.get('/sign-out', auth.signOut)
 
-//Відправка листа зі скиданням паролю
+//Sending password reset email
 router.post('/forgot-password', auth.forgotPass)
 
-//Відновлення паролю (зміна) за посиланням з пошти
+//Password reset (change) via email link
 router.post('/reset-password/:token', auth.resetPass)
 
 export default router

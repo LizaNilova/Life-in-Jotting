@@ -37,19 +37,19 @@ export const ResetPassword = () => {
             <div className="notebook__container">
                 <div className="sticky-note__container">
                     <div className="reset-pass__card">
-                        <div>Зміна паролю</div>
+                        <div>Password Change</div>
                     </div>
                 </div>
                 <div className="forgot-pass__container">
                     <img className="bulb" src={bulb} alt="bulb" />
-                    <p>Для зміни паролю введіть новий в поля нижче</p>
-                    <input value={pass} onChange={(e) => { setPass(e.target.value) }} placeholder="Новий пароль" type="password" />
-                    <input value={repeatPass} onChange={(e) => { setRepeatPass(e.target.value) }} placeholder="Повторіть новий пароль" type="password" />
+                    <p>To change your password, enter a new one in the fields below</p>
+                    <input value={pass} onChange={(e) => { setPass(e.target.value) }} placeholder="New password" type="password" />
+                    <input value={repeatPass} onChange={(e) => { setRepeatPass(e.target.value) }} placeholder="Repeat new password" type="password" />
                     <div className="bottom">
                         <img className="star" src={star} alt="star" />
                         <div className="next-btn"
                             onClick={handleSubmit}>
-                            <label>Далі</label>
+                            <label>Submit changes</label>
                             <img src={next} alt="next" />
                         </div>
                     </div>

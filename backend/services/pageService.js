@@ -26,7 +26,6 @@ const createPage = async ({ title, bg_color, bg_url, notebook_id }) => {
             bg_url: bg_url,
             blocks: []
         })
-        // console.log(newPage.notebook)
         await newPage.save()
         return {
             page: newPage,
@@ -41,7 +40,6 @@ const createPage = async ({ title, bg_color, bg_url, notebook_id }) => {
 }
 
 const getPageById = async (page_id) => {
-    // console.log(1)
     return ({
         page: await Page.findById(page_id),
         message: `Page was returned ...`
@@ -58,12 +56,12 @@ const createNotebook = async ({ name, cover, user }) => {
             await newNotebook.save()
             return ({
                 notebook: newNotebook,
-                message: `New notebook was created... name=${name}, cover=${cover}, user_data._id=${user_data._id}`
+                message: `New notebook was created... name=${name}, cover=${cover}`
             })
         } else {
             return ({
                 notebook: null,
-                message: `Incorrect input data... name=${name}, cover=${cover}, user_data._id=${user_data._id}`
+                message: `Incorrect input data... name=${name}, cover=${cover}`
             })
         }
     } else {

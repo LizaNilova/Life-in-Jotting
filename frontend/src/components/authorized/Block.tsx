@@ -4,7 +4,7 @@ import "./styles/Block.css"
 import { useAppDispatch, useAppSelector } from "../../store/hooks"
 import { setNewDatainBlock } from "../../store/reducers/pageSlice"
 
-export const Block = ({ block, index }: any, { key }: any) => {
+export const Block = ({ block, index }: any) => {
 
     const { page } = useAppSelector(state => state.pageSlice)
     const [text, setText] = useState(block.text)
@@ -17,7 +17,6 @@ export const Block = ({ block, index }: any, { key }: any) => {
 
     return (
         <label>
-            <input type="checkbox" />
             <div className="block__container">
                 <textarea
                     className="block__text-field"
@@ -34,21 +33,21 @@ export const Block = ({ block, index }: any, { key }: any) => {
                             <img src={block.entityRanges[0].src} className="block__img-1" />
                         </div>
                         : <div className="block__add-img-1">
-                            <p>Додати зображення</p>
+                            <p>Add an image</p>
                         </div>
                     }{block.entityRanges[1]
                         ? <div className="block__container-img-2">
                             <img src={block.entityRanges[1].src} className="block__img-2" />
                         </div>
                         : <div className="block__add-img-2">
-                            <p>Додати зображення</p>
+                            <p>Add an image</p>
                         </div>
                     }{block.entityRanges[2]
                         ? <div className="block__container-img-3">
                             <img src={block.entityRanges[2].src} className="block__img-3" />
                         </div>
                         : <div className="block__add-img-3">
-                            <p>Додати зображення</p>
+                            <p>Add an image</p>
                         </div>
                     }
                 </div>

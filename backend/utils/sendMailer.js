@@ -21,10 +21,15 @@ export const sendEmail = async (email, subject, data) => {
                     // text: text,
                     html: `
                     <div>
-                    Для того, щоб скинути пароль, натисніть на посилання нижче.<br/>    
+                    Hello ${data.username}<br/>
+                    You have requested to reset your password. Please click the link below to proceed:<br/><br/>
                     <a href="http://localhost:9090/reset-password/${data.token}">
-                            <label>Далі</label>
+                            <label>LINK IS HERE</label>
                         </a>
+                    <br/><br/>
+                    If you did not request this, please ignore this email.<br/><br/>
+                    Best regards,<br/>
+                    The "Life in Jotting" Team
                     </div>`
                 })
                 break;

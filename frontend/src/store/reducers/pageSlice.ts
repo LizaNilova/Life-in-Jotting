@@ -3,6 +3,7 @@ import $api from "../../utils/api.ts"
 import { pageState } from '../../types/types.ts'
 
 const initialState: pageState = {
+    //this is for testing purposes
     // notebooks: [
     //     { id: "1", user: "user1", name: "Notebook 1", cover: "Cover 1" },
     //     { id: "1", user: "user1", name: "Notebook 2", cover: "Cover 1" },

@@ -1,6 +1,5 @@
 import User from "../models/user.js";
 import Event from "../models/events.js"
-import notebooks from "../models/notebooks.js";
 
 //confirm entered code by user, comparing code from db and this code
 const confirmEnteredCode = async (eventId, code) => {

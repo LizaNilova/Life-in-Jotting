@@ -28,6 +28,6 @@ router.delete('/pages/:page_id/delete', pages.deletePageFromNotebook)
 //delete notebook with pages
 router.delete('/:notebook_id/delete', pages.deleteNotebookWithPages)
 
-//replace page from one notebook to another
+//replace page from one notebook to another (not implemented yet)
 
 export default router

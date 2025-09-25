@@ -36,7 +36,6 @@ export const userSlice = createSlice({
         builder.addCase(userProfile.fulfilled, (state, action) => {
             state.isLoading = false
             state.user = action.payload.user
-            // console.log(state.user)
             state.status = action.payload.message
         })
         builder.addCase(userProfile.rejected, (state, action: any) => {

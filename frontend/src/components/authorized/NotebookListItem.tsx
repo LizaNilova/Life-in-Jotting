@@ -20,6 +20,7 @@ export const NotebookListItem = ({ notebook, key }: any) => {
         }
     }
 
+    //This is for highlighting active notebook (not implemented yet)
     const { active_notebook } = useAppSelector(state => state.pageSlice)
 
 

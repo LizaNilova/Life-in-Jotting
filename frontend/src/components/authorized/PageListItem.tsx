@@ -6,7 +6,6 @@ import { getPage } from "../../store/reducers/pageSlice"
 import "./styles/PageListItem.css"
 
 export const PageListItem = (page: any) => {
-    // console.log(page)
     const dispatch = useAppDispatch()
 
     const onClickPageItem = () => {
@@ -22,8 +21,6 @@ export const PageListItem = (page: any) => {
             <div className="page__settings-icon">
                 <img src={delete_icon} />
             </div>
-
         </div>
-
     )
 }

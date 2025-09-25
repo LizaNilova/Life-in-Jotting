@@ -31,11 +31,11 @@ const signUp = async (req, res) => {
     const newUser = new User({
         username,
         password: hash,
-        email: email,
-        notebooks: []
+        email: email
     })
-
+    // console.log(newUser)
     await newUser.save()
+
     // console.log(activationCode.toString())
     const code = await sendCode(newUser)
     return code
@@ -47,7 +47,7 @@ const sendCode = async (user) => {
         userId: user._id,
         eventContent: activationCode.join('')
     })
-    await sendEmail(user.email, "Verify Email", { text: `Добрий ранок, день чи вечір! \nКод підтвердження пошти\n ${activationCode.join('')}` })
+    await sendEmail(user.email, "Verify Email", { text: `Hello ${user.username},\n\nThank you for registering with "Life in Jotting"!\nTo complete your account activation, please use the following verification code:\n\n Your code\n ${activationCode.join('')}\n\nIf you didn’t request this code, please ignore this email.\n\n Best regards,\nThe "Life in Jotting" Team` })
     return event._id
 }
 
@@ -124,7 +124,7 @@ const forgotPass = async (req) => {
             process.env.JWT_SECRET_FORGOT_PASSWORD,
             { expiresIn: "15m" }
         );
-        await sendEmail(user.email, "Відновлення доступу до облікового запису", { token: v_token, type: "forgot" })
+        await sendEmail(user.email, `Restoring access to your account in "Life in Jotting"`, { token: v_token, type: "forgot", username: user.username })
     }
     return ({ message: "mail send (forgot pass)" })
 }
@@ -170,7 +170,7 @@ const resetPass = async (req) => {
         await user.save();
         return { message: "Your password was changed" };
     } else {
-        return ({ message: "COntent can not be empty (reset password)" })
+        return ({ message: "Content can not be empty (reset password)" })
     }
 
 

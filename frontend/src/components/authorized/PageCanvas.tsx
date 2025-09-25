@@ -31,9 +31,6 @@ export const PageCanvas = () => {
         dispatch(editPage({ page_id: page?._id, title: page?.title, blocks: page?.blocks, bg_color: page?.bg_color, bg_url: page?.bg_url }))
     }
 
-    const onClickSort = () => {
-
-    }
     return (
         <div className="page-canvas__main-container">
             <div className="page-canvas__header">
@@ -42,10 +39,7 @@ export const PageCanvas = () => {
                         {page?.title}
                         <div className="page-canvas__btns">
                             <div className="page-canvas__save" onClick={onClickSaveChanges}>Зберегти зміни</div>
-                            <div className="page-canvas__save" onClick={onClickSort}>Сортувати</div>
-
                         </div>
-
                     </> : <></>
 
                 }
@@ -56,7 +50,7 @@ export const PageCanvas = () => {
                     e.stopPropagation()
                 }}>
                     {page && page?.blocks && page?.blocks.map((item, index) => (
-                        <Block block={item} key={index} index={index} />
+                        <Block block={item} index={index} />
                     ))}
                 </div>
 

@@ -28,18 +28,18 @@ export const PasswordRecovery = () => {
             <div className="notebook__container">
                 <div className="sticky-note__container">
                     <div className="card">
-                        <div>Забули пароль?</div>
+                        <div>Forgot your password?</div>
                     </div>
                 </div>
                 <div className="forgot-pass__container">
                     <img className="bulb" src={bulb} alt="bulb" />
-                    <p>Введіть e-mail, за яким було зареєстровано обліковий запис</p>
+                    <p>Enter the email address used to register your account</p>
                     <input value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="your.e-mail@mail.com" type="text" />
                     <div className="bottom">
                         <img className="star" src={star} alt="star" />
                         <div className="next-btn"
                             onClick={handleSubmit}>
-                            <label>Далі</label>
+                            <label>Send request</label>
                             <img src={next} alt="next" />
                         </div>
                     </div>
